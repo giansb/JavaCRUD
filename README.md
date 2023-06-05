@@ -1,6 +1,6 @@
 # JavaCRUD
 
-Sitema básico de CRUD no Java Gráfico
+Sistema básico de CRUD no Java Gráfico.
 
 #
 
