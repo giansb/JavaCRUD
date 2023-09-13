@@ -270,12 +270,11 @@ public class Janela extends javax.swing.JFrame {
         list.add(p);
         String[] coluna ={"","","",""};
         
-        coluna[0] =  String.valueOf(p.getCod());
-        coluna[1] = p.getNome();
-        coluna[2] = String.valueOf(p.getPreco());
-        coluna[3] = String.valueOf(p.getQntd());
+        Produto produto = new Produto();
+        produto = produto.registrarProduto(p, model);
         
-        model.addRow(coluna);
+        TesteCRUD tc = new TesteCRUD();
+        tc.TesteRegistro(model, "pastel");
         cont++;
         
         jTextFieldCampoNome.setText(null);

@@ -5,6 +5,8 @@
  */
 package projetocrudoperation;
 
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author 182210120
@@ -46,7 +48,19 @@ public class Produto {
     public void setPreco(float preco) {
         this.preco = preco;
     }
-
+    
+    public Produto registrarProduto(Produto p , DefaultTableModel table) {
+        String[] coluna ={"","","",""};
+        
+        coluna[0] =  String.valueOf(p.getCod());
+        coluna[1] = p.getNome();
+        coluna[2] = String.valueOf(p.getPreco());
+        coluna[3] = String.valueOf(p.getQntd());
+        
+        table.addRow(coluna);
+        
+        return p;
+    }
     
     
     
